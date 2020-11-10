@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container text-center" style="margin-top: 5rem;">
+    <h1>Добро пожаловать!</h1>
+    <h3>Вы подключились к порталу Билайн Бизнес.</h3>
+    <h1 style="margin-top: 3rem; margin-bottom: 3rem;">Авторизация</h1>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item mt-3">
+            <div class="row align-items-center">
+                <div class="col-sm-7">
+                    <h4>Если вы зарегестрированы в гостинице, пожалуйста, авторизуйтесь используя номер комнаты и
+                        фамилию латиницей.</h4>
+                </div>
+                <div class="col-sm-5">
+                    <a href="{% url 'enter' %}" class="btn btn-warning btn-lg">По номеру комнаты</a>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item mt-3 mb-3">
+            <div class="row align-items-center">
+                <div class="col-sm-7">
+                    <h4>Или вы можете воспользоваться авторизацией по номеру телефона.</h4>
+                </div>
+                <div class="col-sm-5">
+                    <a href="{% url 'enter' %}" class="btn btn-warning btn-lg">Публичная авторизация</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+{% endblock %}
